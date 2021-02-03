@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+require("dotenv").config();
 
-function App() {
+const App = () => {
+
+  const APP_KEY = process.env.FOOD_SEARCH_APP_KEY;
+  const APP_ID = process.env.FOOD_SEARCH_APP_ID;
+  
+  const exampleReq = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <input type="text" />
+        <button>Search</button>
+      </form>
     </div>
   );
 }
