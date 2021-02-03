@@ -10,9 +10,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <form>
-        <input type="text" />
-        <button>Search</button>
+      <form className="search-form">
+        <input className="search-bar" type="text" />
+        <button className="search-btn" type="submit">Search</button>
       </form>
     </div>
   );
